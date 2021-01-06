@@ -76,8 +76,9 @@ void stack_vm::do_primitive()
       running= 0;
       break;
     case 1://add
-      std::cout<<"add" << memory[sp-1] <<"  "<<memory[sp] << std::endl;
+      std::cout<<"add " << memory[sp-1] <<"  "<<memory[sp] << std::endl;
       memory[sp -1] += memory[sp];
+      sp--;
       break;
   
   }
@@ -91,7 +92,7 @@ void stack_vm::run()
     fetch();
     decode();
     execute();
-    std::cout<<"tos" <<memory[sp]<<std::endl;
+    std::cout<<"tos " <<memory[sp]<<std::endl;
   }
 }
 

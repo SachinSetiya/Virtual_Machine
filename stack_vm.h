@@ -19,7 +19,7 @@ private:
   std::vector<int32> memory;
   int32 type= 0;
   int32 data= 0;
-  int32 running= 0;
+  int32 running= 1;
 
   int32 get_type(int32 instruction);
   int32 get_data(int32 data);
